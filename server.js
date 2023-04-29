@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
+import compression from "compression";
 
 import ENV from "./config.js";
 import connect from "./conn.js";
@@ -8,6 +9,8 @@ import router from "./router.js";
 
 const app = express();
 
+
+app.use(compression());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({
     limit: "50mb",
