@@ -24,7 +24,7 @@ app.use(express.urlencoded({
     limit: "50mb",
     extended: true
 }));
-app.use(morgan("tiny"));
+//app.use(morgan("tiny"));
 app.use(cors());
 app.disable("x-powered-by");
 app.disable('etag');
